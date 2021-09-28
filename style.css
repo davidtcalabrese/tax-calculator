@@ -1,0 +1,109 @@
+body {
+    background-color: #000;
+    background-image: url(receipts-cropped.webp);
+    max-width: 1400px;
+    background-size: cover;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1 {
+    margin: 1.5em auto;
+    text-align: center;
+}
+
+h1, label, p {
+    color: #fff;
+}
+
+
+.form-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-right: 2em;
+}
+
+.inner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 100;
+}
+
+
+
+.btn {
+    margin-top: 1em;
+}
+
+input, label, button {
+    margin: .5em;
+}
+
+.piechart-container {
+    width: 200px;
+    max-width: 600px;
+    flex-grow: 4;
+}
+
+table {
+    margin-top: 1em;
+    border-collapse: collapse;
+}
+
+footer {
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+
+
+li {
+    color:rgba(255, 99, 132);
+    color:rgba(255, 165, 0);
+    color:rgba(255, 255, 0);
+    color:rgb(0, 233, 70);
+    color:rgba(54, 0, 255);
+}
+
+/* Media queries */
+@media only screen and (max-width: 900px) {
+    body {
+        background-repeat: repeat;
+    }
+    .container {
+        flex-direction: column;
+    }
+
+    .piechart-container {
+        width: 100%;
+    }
+
+    .form-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .piechart-container {
+        width: 80%;
+    }
+}

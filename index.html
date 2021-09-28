@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--                         ___
+                         __/_  `.  .-"'"-.
+Author: David Calabrese \_,` | \-'  /   )`-')
+Date: 09/11/2021         "") `"` DC  \  ((`"`
+                       ___Y  ,    .'7 /|
+                     (_,___/...-` (_/_/ -->
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <!-- chart.js --> 
+        <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+        <link rel='stylesheet' href='style.css'>
+        <script src='script.js' defer></script>
+        <title>Tax Calculator - Project 1</title>
+    </head>
+    <body>
+        <h1>Tax Calculator</h1>
+        <div class="container">
+      
+                <div class="form-container">    
+                    <div class="inner-container">
+
+                        <form id="tax-form">
+                            <label for="gross-salary">Enter gross income (USD):</label>
+                            <input  type="number" 
+                                    id="gross-salary"
+                                    name="gross-salary" 
+                                    class="form-control"
+                                    pattern="^(([1-9]*)|(([1-9]*)\.([0-9]*)))$"
+                                    title="Positive numbers only"
+                                    min="0">
+                            <button type="submit"
+                                    class="btn btn-primary" 
+                                    id="calculate-taxes">
+                                    Calculate Taxes</button>     
+                            <button class="btn btn-danger" id="btn-reset">Reset</button>           
+                        </form>                
+                    
+                        <div class="output"></div>
+                    </div> 
+                    
+
+                </div> <!-- end .form-container-->  
+
+    
+            <div class="piechart-container">
+                <canvas id="pieChart"></canvas>
+            </div> <!-- end .piechart-container -->
+        </div>
+    
+
+        <footer>
+            <p>Photo by Ibrahim Boran on Unsplash </p>
+        </footer>
+
+    </body>
+
+</html>
