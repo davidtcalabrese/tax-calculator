@@ -1,40 +1,54 @@
 body {
     background-color: #000;
     background-image: url(annie-spratt-yI3weKNBRTc-unsplash.jpg);
-    max-width: 1400px;
     background-size: cover;
-}
-
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    background-position: bottom;
+    position: relative;
+    min-height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 h1 {
-    margin: 1.5em auto;
+    margin: 1rem 0;
     text-align: center;
 }
 
 h1, label, p {
-    color: #fff;
+    color: #000;
 }
 
+.warning {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    max-width: 1000px;
+}
 
 .form-container {
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
     flex-direction: column;
-    margin-right: 2em;
+    margin-right: 1rem;
+    min-width: 310px;
 }
 
 .inner-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
+}
+
+.gross-salary {
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
 form {
@@ -45,65 +59,81 @@ form {
     z-index: 100;
 }
 
-
-
 .btn {
-    margin-top: 1em;
+    margin-top: .5rem;
 }
 
 input, label, button {
-    margin: .5em;
+    margin: .5rem;
 }
 
 .piechart-container {
-    width: 200px;
     max-width: 600px;
+    min-width: 550px;
     flex-grow: 4;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 table {
-    margin-top: 1em;
+    margin-top: 1rem;
     border-collapse: collapse;
 }
 
 footer {
-    text-align: center;
-    margin-top: 1.5em;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 1rem;
 }
 
-
-
-li {
-    color:rgba(255, 99, 132);
-    color:rgba(255, 165, 0);
-    color:rgba(255, 255, 0);
-    color:rgb(0, 233, 70);
-    color:rgba(54, 0, 255);
+footer p {
+    font-weight: 600;
+    font-size: 1.3em;
 }
+
 
 /* Media queries */
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
     body {
         background-repeat: repeat;
+        overflow-y: auto;
     }
     .container {
         flex-direction: column;
+        align-items: center;
     }
 
     .piechart-container {
-        width: 100%;
+        max-width: 90%;
+        margin: 3rem 0 2rem .5rem;
+        padding-bottom: 4rem;
     }
 
     .form-container {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center;  
+    }
+
+    footer {
+        text-align: center;   
+        left: 0;
     }
 }
 
-@media only screen and (min-width: 1200px) {
-
-    .piechart-container {
-        width: 80%;
+@media screen and (max-width: 550px) {
+ 
+    #pieChart {
+        max-width: 500px;
+        max-height: 500px;
     }
-}
+} 
+    
+
+
